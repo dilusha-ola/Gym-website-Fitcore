@@ -99,6 +99,11 @@ export default function Home() {
             className="absolute inset-0 bg-amber-400"
             style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
           />
+          {/* Left black wedge */}
+          <div
+            className="absolute inset-0 bg-black"
+            style={{ clipPath: "polygon(0 0, 54% 100%, 0 100%)" }}
+          />
         </div>
       </section>
 
