@@ -1,4 +1,26 @@
 import Image from "next/image";
+import ServiceCard from "./components/ServiceCard";
+
+const services = [
+  {
+    path: "/Personal-training.jpg",
+    title: "Personal Training",
+    description:
+      "One-on-one sessions with certified trainers tailored to your specific fitness goals and needs.",
+  },
+  {
+    path: "/group-class.jpg",
+    title: "Group Classes",
+    description:
+      "Energetic group sessions including Yoga, HIIT, Zumba and more for all fitness levels.",
+  },
+  {
+    path: "/diet-plan.jpg",
+    title: "Diet Plans",
+    description:
+      "Personalized meal planning and nutrition guidance to complement your fitness journey.",
+  },
+];
 
 export default function Home() {
   return (
@@ -62,6 +84,26 @@ export default function Home() {
             and diverse class offerings provide the perfect environment to
             achieve your fitness goals.
           </p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide text-center mb-4">
+            Services
+          </h2>
+          <div className="w-16 h-1 bg-amber-400 mx-auto mb-12 rounded-full" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                path={service.path}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </main>
