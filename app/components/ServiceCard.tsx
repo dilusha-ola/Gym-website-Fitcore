@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ path, title, description }: ServiceCardProps) {
   return (
-    <div className="rounded-2xl overflow-hidden shadow-md flex flex-col">
+    <div className="rounded-2xl overflow-hidden shadow-md flex flex-col h-full">
       {/* Card Image */}
       <div className="relative w-full h-52">
         <Image

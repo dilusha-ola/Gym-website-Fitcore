@@ -56,8 +56,8 @@ export default function Home() {
       </section>
 
       {/* Diagonal Section Divider */}
-      <section className="bg-zinc-100 pt-16">
-        <div className="relative w-full h-24 bg-zinc-100 overflow-hidden">
+      <section className="bg-white pt-16 pb-16">
+        <div className="relative w-full h-24 bg-white overflow-hidden">
           {/* Left black wedge */}
           <div
             className="absolute inset-0 bg-black"
@@ -72,8 +72,8 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-zinc-100 py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-12 py-14 text-center shadow-lg">
+      <section className="bg-white px-6 py-6">
+        <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-12 py-12 text-center shadow-lg">
           <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide mb-4">
             About Us
           </h2>
@@ -88,22 +88,37 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="bg-white py-16">
+        <div className="px-6">
           <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide text-center mb-4">
             Services
           </h2>
           <div className="w-16 h-1 bg-amber-400 mx-auto mb-12 rounded-full" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        </div>
+        <div className="overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
+          <div className="flex gap-8 px-6 w-max mx-auto">
             {services.map((service) => (
-              <ServiceCard
-                key={service.title}
-                path={service.path}
-                title={service.title}
-                description={service.description}
-              />
+              <div key={service.title} className="w-80 shrink-0 snap-start">
+                <ServiceCard
+                  path={service.path}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
             ))}
           </div>
+        </div>
+        
+      </section>
+    
+    {/* Diagonal Section Divider */}
+      <section className="bg-white">
+        <div className="relative w-full h-24 bg-white overflow-hidden">
+          {/* Right golden yellow wedge */}
+          <div
+            className="absolute inset-0 bg-amber-400"
+            style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
+          />
         </div>
       </section>
     </main>
