@@ -33,6 +33,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Diagonal Section Divider */}
+      <section className="bg-zinc-100 pt-16">
+        <div className="relative w-full h-24 bg-zinc-100 overflow-hidden">
+          {/* Left black wedge */}
+          <div
+            className="absolute inset-0 bg-black"
+            style={{ clipPath: "polygon(0 0, 54% 100%, 0 100%)" }}
+          />
+          {/* Right golden yellow wedge */}
+          <div
+            className="absolute inset-0 bg-amber-400"
+            style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
+          />
+        </div>
+      </section>
+
       {/* About Us Section */}
       <section className="bg-zinc-100 py-20 px-6">
         <div className="max-w-3xl mx-auto bg-zinc-200 rounded-3xl px-12 py-14 text-center shadow-sm">
