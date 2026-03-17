@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ServiceCard from "./components/ServiceCard";
 import ContactForm from "./components/ContactForm";
+import ServicesSection from "./components/ServicesSection";
 
 const services = [
   {
@@ -88,29 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="bg-white py-16">
-        <div className="px-6">
-          <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide text-center mb-4">
-            Services
-          </h2>
-          <div className="w-16 h-1 bg-amber-400 mx-auto mb-12 rounded-full" />
-        </div>
-        <div className="overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
-          <div className="flex gap-8 px-6 w-max mx-auto">
-            {services.map((service) => (
-              <div key={service.title} className="w-80 shrink-0 snap-start">
-                <ServiceCard
-                  path={service.path}
-                  title={service.title}
-                  description={service.description}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-        
-      </section>
+      <ServicesSection services={services} />
     
     {/* Diagonal Section Divider */}
       <section className="bg-white">
