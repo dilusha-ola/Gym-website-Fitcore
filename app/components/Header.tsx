@@ -34,8 +34,8 @@ export default function Header() {
                 href={link.href}
                 className={
                   link.label === "Home"
-                    ? "bg-lime-400 text-black font-bold px-6 py-2 rounded-full transition-opacity hover:opacity-80"
-                    : "text-black font-semibold px-6 py-2 rounded-full hover:bg-amber-300 transition-colors"
+                    ? "bg-amber-300 text-black text-2xl font-bold px-6 py-2 rounded-full"
+                    : "text-black text-2xl font-semibold px-6 py-2 rounded-full hover:bg-amber-300 transition-colors"
                 }
               >
                 {link.label}
