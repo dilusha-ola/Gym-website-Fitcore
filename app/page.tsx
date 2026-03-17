@@ -32,6 +32,22 @@ export default function Home() {
           </button>
         </div>
       </section>
+
+      {/* About Us Section */}
+      <section className="bg-zinc-100 py-20 px-6">
+        <div className="max-w-3xl mx-auto bg-zinc-200 rounded-3xl px-12 py-14 text-center shadow-sm">
+          <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide mb-4">
+            About Us
+          </h2>
+          <div className="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full" />
+          <p className="text-zinc-700 text-lg leading-relaxed">
+            FitCore Gym is dedicated to helping individuals of all fitness levels
+            reach their full potential. Our state-of-the-art facility, expert trainers
+            and diverse class offerings provide the perfect environment to
+            achieve your fitness goals.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
