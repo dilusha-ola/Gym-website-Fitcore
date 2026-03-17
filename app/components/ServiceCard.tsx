@@ -24,7 +24,7 @@ export default function ServiceCard({ path, title, description }: ServiceCardPro
       {/* Card Content */}
       <div className="bg-amber-400 px-5 py-4 flex flex-col gap-2 flex-1">
         <h3 className="text-black font-extrabold text-xl uppercase">{title}</h3>
-        <p className="text-black text-sm leading-relaxed">{description}</p>
+        <p className="text-black text-xl leading-relaxed">{description}</p>
       </div>
     </div>
   );

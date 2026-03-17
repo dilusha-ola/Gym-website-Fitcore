@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ServiceCard from "./components/ServiceCard";
+import ContactForm from "./components/ContactForm";
 
 const services = [
   {
@@ -120,6 +121,11 @@ export default function Home() {
             style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
           />
         </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-white py-16 px-6">
+        <ContactForm />
       </section>
     </main>
   );
