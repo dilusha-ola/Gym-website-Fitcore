@@ -21,7 +21,7 @@ export default function Header() {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-amber-400 px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between shadow-md">
+    <header className="bg-amber-400 dark:bg-orange-500 px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between shadow-md transition-colors duration-300">
       {/* Logo + Brand Name */}
       <div className="flex items-center gap-2 sm:gap-3 min-w-0">
         <Image
@@ -105,8 +105,8 @@ export default function Header() {
                   href={href}
                   className={
                     isActive
-                      ? "bg-amber-300 dark:bg-amber-600 text-black dark:text-white text-sm sm:text-base lg:text-xl font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2 rounded-full transition-colors duration-300"
-                      : "text-black dark:text-white text-sm sm:text-base lg:text-xl font-semibold px-3 sm:px-4 lg:px-6 py-1 sm:py-2 rounded-full transition-colors duration-300 hover:bg-amber-300 dark:hover:bg-amber-600"
+                      ? "bg-amber-300 dark:bg-orange-600 text-black dark:text-black text-sm sm:text-base lg:text-xl font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2 rounded-full transition-colors duration-300"
+                      : "text-black dark:text-black text-sm sm:text-base lg:text-xl font-semibold px-3 sm:px-4 lg:px-6 py-1 sm:py-2 rounded-full transition-colors duration-300 hover:bg-amber-300 dark:hover:bg-orange-600"
                   }
                 >
                   {link.label}
@@ -119,7 +119,7 @@ export default function Header() {
 
       {/* Navigation - Mobile */}
       {menuOpen && (
-        <nav className="absolute top-16 left-0 right-0 bg-amber-400 dark:bg-gray-900 md:hidden transition-colors duration-300">
+        <nav className="absolute top-16 left-0 right-0 bg-amber-400 dark:bg-orange-500 md:hidden transition-colors duration-300">
           <ul className="flex flex-col border-t border-amber-500 dark:border-gray-700">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -133,8 +133,8 @@ export default function Header() {
                     onClick={() => setMenuOpen(false)}
                     className={`block px-4 py-3 text-sm font-semibold transition-colors duration-300 ${
                       isActive 
-                        ? "bg-amber-300 dark:bg-amber-600 text-black dark:text-white" 
-                        : "text-black dark:text-white hover:bg-amber-300 dark:hover:bg-amber-600"
+                        ? "bg-amber-300 dark:bg-orange-600 text-black dark:text-black" 
+                        : "text-black dark:text-black hover:bg-amber-300 dark:hover:bg-orange-600"
                     }`}
                   >
                     {link.label}

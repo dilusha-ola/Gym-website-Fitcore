@@ -20,7 +20,7 @@ export default function MembershipPlanCard({
   // Define color schemes for each plan type
   const colorSchemes = {
     diamond: {
-      headerBg: "bg-[#392D22] dark:bg-yellow-500 transition-colors duration-300",
+      headerBg: "bg-[#392D22] dark:bg-amber-400 transition-colors duration-300",
       titleBg: "bg-[#484747] dark:bg-gray-800 transition-colors duration-300",
       titleText: "text-yellow-400 dark:text-orange-500",
       bodyBg: "bg-[#484747] dark:bg-gray-800 transition-colors duration-300",
@@ -29,7 +29,7 @@ export default function MembershipPlanCard({
       buttonText: "text-yellow-400 dark:text-white",
     },
     platinum: {
-      headerBg: "bg-black dark:bg-yellow-500 transition-colors duration-300",
+      headerBg: "bg-black dark:bg-amber-400 transition-colors duration-300",
       titleBg: "bg-[#392D22] dark:bg-gray-800 transition-colors duration-300",
       titleText: "text-yellow-400 dark:text-orange-500",
       bodyBg: "bg-[#392D22] dark:bg-gray-800 transition-colors duration-300",
@@ -38,7 +38,7 @@ export default function MembershipPlanCard({
       buttonText: "text-yellow-400 dark:text-white",
     },
     gold: {
-      headerBg: "bg-yellow-400 dark:bg-yellow-500 transition-colors duration-300",
+      headerBg: "bg-yellow-400 dark:bg-amber-400 transition-colors duration-300",
       titleBg: "bg-black dark:bg-gray-800 transition-colors duration-300",
       titleText: "text-yellow-400 dark:text-orange-500",
       bodyBg: "bg-black dark:bg-gray-800 transition-colors duration-300",
@@ -47,7 +47,7 @@ export default function MembershipPlanCard({
       buttonText: "text-black dark:text-white",
     },
     silver: {
-      headerBg: "bg-[#484747] dark:bg-yellow-500 transition-colors duration-300",
+      headerBg: "bg-[#484747] dark:bg-amber-400 transition-colors duration-300",
       titleBg: "bg-black dark:bg-gray-800 transition-colors duration-300",
       titleText: "text-yellow-400 dark:text-orange-500",
       bodyBg: "bg-black dark:bg-gray-800 transition-colors duration-300",
