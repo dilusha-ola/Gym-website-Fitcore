@@ -30,7 +30,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   return (
-    <section className="bg-white py-16">
+    <section id="services" className="bg-white py-16">
       <div className="px-6">
         <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide text-center mb-4">
           Services

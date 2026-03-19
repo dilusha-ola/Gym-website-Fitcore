@@ -44,7 +44,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Hero Text + CTA */}
-        <div className="absolute inset-0 flex flex-col justify-center px-16 md:px-24 lg:px-32">
+        <div className="absolute inset-0 flex flex-col justify-center px-16 md:px-24 lg:px-20">
           <h1 className="text-white font-extrabold uppercase leading-none tracking-tight">
             <span className="block text-7xl md:text-8xl lg:text-9xl">UNLOCK</span>
             <span className="block text-7xl md:text-8xl lg:text-9xl">YOUR</span>
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-white px-6 py-6">
+      <section id="about" className="bg-white px-6 py-6">
         <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-12 py-12 text-center shadow-lg">
           <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide mb-4">
             About Us
