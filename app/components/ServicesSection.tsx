@@ -30,12 +30,12 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   return (
-    <section id="services" className="bg-white py-16">
-      <div className="px-6">
-        <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide text-center mb-4">
+    <section id="services" className="bg-white py-8 sm:py-12 md:py-16">
+      <div className="px-4 sm:px-6 md:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black uppercase tracking-wide text-center mb-3 sm:mb-4 md:mb-6">
           Services
         </h2>
-        <div className="w-16 h-1 bg-amber-400 mx-auto mb-12 rounded-full" />
+        <div className="w-12 sm:w-16 h-1 bg-amber-400 mx-auto mb-8 sm:mb-12 rounded-full" />
       </div>
 
       <div className="relative">

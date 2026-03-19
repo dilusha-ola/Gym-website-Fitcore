@@ -44,14 +44,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Hero Text + CTA */}
-        <div className="absolute inset-0 flex flex-col justify-center px-16 md:px-24 lg:px-20">
+        <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24">
           <h1 className="text-white font-extrabold uppercase leading-none tracking-tight">
-            <span className="block text-7xl md:text-8xl lg:text-9xl">UNLOCK</span>
-            <span className="block text-7xl md:text-8xl lg:text-9xl">YOUR</span>
-            <span className="block text-7xl md:text-8xl lg:text-9xl">POTENTIAL.</span>
+            <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">UNLOCK</span>
+            <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">YOUR</span>
+            <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">POTENTIAL.</span>
           </h1>
 
-          <button className="mt-10 w-fit bg-amber-400 hover:bg-amber-300 transition-colors text-black font-extrabold text-xl uppercase tracking-widest px-10 py-4 rounded-full">
+          <button className="mt-6 sm:mt-8 md:mt-10 w-fit bg-amber-400 hover:bg-amber-300 transition-colors text-black font-extrabold text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-widest px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 rounded-full">
             JOIN TODAY!
           </button>
         </div>
@@ -74,13 +74,13 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="bg-white px-6 py-6">
-        <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-12 py-12 text-center shadow-lg">
-          <h2 className="text-4xl font-extrabold text-black uppercase tracking-wide mb-4">
+      <section id="about" className="bg-white px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+        <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 text-center shadow-lg">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black uppercase tracking-wide mb-3 sm:mb-4 md:mb-6">
             About Us
           </h2>
-          <div className="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full" />
-          <p className="text-zinc-700 text-2xl leading-relaxed">
+          <div className="w-12 sm:w-16 h-1 bg-amber-400 mx-auto mb-6 sm:mb-8 rounded-full" />
+          <p className="text-zinc-700 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
             FitCore Gym is dedicated to helping individuals of all fitness levels
             reach their full potential. Our state-of-the-art facility, expert trainers
             and diverse class offerings provide the perfect environment to

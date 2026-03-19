@@ -8,9 +8,9 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ path, title, description }: ServiceCardProps) {
   return (
-    <div className="rounded-2xl overflow-hidden shadow-md flex flex-col h-full">
+    <div className="rounded-lg sm:rounded-2xl overflow-hidden shadow-md flex flex-col h-full">
       {/* Card Image */}
-      <div className="relative w-full h-52">
+      <div className="relative w-full h-32 sm:h-40 md:h-52">
         <Image
           src={path}
           alt={title}
@@ -22,9 +22,9 @@ export default function ServiceCard({ path, title, description }: ServiceCardPro
       </div>
 
       {/* Card Content */}
-      <div className="bg-amber-400 px-5 py-4 flex flex-col gap-2 flex-1">
-        <h3 className="text-black font-extrabold text-xl uppercase">{title}</h3>
-        <p className="text-black text-xl leading-relaxed">{description}</p>
+      <div className="bg-amber-400 px-3 sm:px-5 py-3 sm:py-4 flex flex-col gap-1 sm:gap-2 flex-1">
+        <h3 className="text-black font-extrabold text-sm sm:text-base md:text-xl uppercase">{title}</h3>
+        <p className="text-black text-xs sm:text-sm md:text-lg leading-relaxed">{description}</p>
       </div>
     </div>
   );

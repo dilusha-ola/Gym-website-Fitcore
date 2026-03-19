@@ -60,27 +60,27 @@ export default function MembershipPlanCard({
   const colors = colorSchemes[planType];
 
   return (
-    <div className="rounded-2xl overflow-hidden shadow-lg flex flex-col h-full min-h-[700px] max-w-sm w-full">
+    <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg flex flex-col h-full min-h-[600px] sm:min-h-[700px] max-w-sm w-full mx-auto sm:mx-0">
       {/* Header with Dumbbell Icon */}
-      <div className={`${colors.headerBg} px-6 py-8 flex justify-center`}>
+      <div className={`${colors.headerBg} px-4 sm:px-6 py-6 sm:py-8 flex justify-center`}>
         {planType === "gold" ? (
-          <span className="text-7xl">🏋️</span>
+          <span className="text-5xl sm:text-7xl">🏋️</span>
         ) : (
-          <span className="text-7xl">🏋️</span>
+          <span className="text-5xl sm:text-7xl">🏋️</span>
         )}
       </div>
 
       {/* Plan Name Section */}
-      <div className={`${colors.titleBg} px-6 py-6 text-center`}>
-        <h3 className={`text-3xl font-extrabold ${colors.titleText} uppercase tracking-wide`}>
+      <div className={`${colors.titleBg} px-4 sm:px-6 py-4 sm:py-6 text-center`}>
+        <h3 className={`text-xl sm:text-2xl md:text-3xl font-extrabold ${colors.titleText} uppercase tracking-wide`}>
           {planName}
         </h3>
       </div>
 
       {/* Body Content */}
-      <div className={`${colors.bodyBg} px-6 py-6 flex-1 flex flex-col`}>
+      <div className={`${colors.bodyBg} px-4 sm:px-6 py-4 sm:py-6 flex-1 flex flex-col`}>
         {/* Pricing Section */}
-        <div className={`${colors.bodyText} space-y-2 text-lg mb-4`}>
+        <div className={`${colors.bodyText} space-y-2 text-xs sm:text-sm md:text-base mb-4`}>
           <div className="flex justify-between">
             <span>Gents</span>
             <span className="font-semibold">Annual Rs. {pricing.gents.toLocaleString()}</span>
@@ -96,15 +96,15 @@ export default function MembershipPlanCard({
         </div>
 
         {/* Monthly Membership */}
-        <div className={`${colors.bodyText} text-lg mb-4 pb-4 border-b border-opacity-20 border-white`}>
-          <div className="flex justify-between">
+        <div className={`${colors.bodyText} text-xs sm:text-sm md:text-base mb-4 pb-4 border-b border-opacity-20 border-white`}>
+          <div className="flex justify-between flex-col sm:flex-row gap-1 sm:gap-0">
             <span>Gym Membership (1 Month):</span>
             <span className="font-semibold">Rs. {monthlyPrice.toLocaleString()}</span>
           </div>
         </div>
 
         {/* Features List */}
-        <div className={`${colors.bodyText} space-y-1 text-xl flex-1`}>
+        <div className={`${colors.bodyText} space-y-1 text-sm sm:text-base md:text-lg flex-1`}>
           {features.map((feature, index) => (
             <div key={index} className="text-center">
               <span>{feature}</span>
@@ -114,9 +114,9 @@ export default function MembershipPlanCard({
       </div>
 
       {/* Select Plan Button */}
-      <div className={`${colors.bodyBg} px-6 py-6`}>
+      <div className={`${colors.bodyBg} px-4 sm:px-6 py-4 sm:py-6`}>
         <button
-          className={`${colors.buttonBg} ${colors.buttonText} w-full font-extrabold text-lg py-3 rounded-full transition-colors uppercase tracking-wide`}
+          className={`${colors.buttonBg} ${colors.buttonText} w-full font-extrabold text-xs sm:text-sm md:text-base lg:text-lg py-2 sm:py-3 rounded-full transition-colors uppercase tracking-wide`}
         >
           Select Plan
         </button>
