@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="text-white py-8 sm:py-12 px-4 sm:px-6 md:px-8" style={{ backgroundColor: 'rgb(57, 45, 34)' }}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <footer className="text-white py-8 sm:py-12 px-4 sm:px-6 md:px-8 bg-[#392D22] dark:bg-gray-900 transition-colors duration-300" style={{ backgroundColor: 'rgb(57, 45, 34)' }}>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 dark:text-gray-100">
 
         {/* Contact Information */}
         <div>

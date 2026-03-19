@@ -30,12 +30,12 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   return (
-    <section id="services" className="bg-white py-8 sm:py-12 md:py-16">
+    <section id="services" className="bg-white dark:bg-gray-950 py-8 sm:py-12 md:py-16 transition-colors duration-300">
       <div className="px-4 sm:px-6 md:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black uppercase tracking-wide text-center mb-3 sm:mb-4 md:mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black dark:text-white uppercase tracking-wide text-center mb-3 sm:mb-4 md:mb-6 transition-colors duration-300">
           Services
         </h2>
-        <div className="w-12 sm:w-16 h-1 bg-amber-400 mx-auto mb-8 sm:mb-12 rounded-full" />
+        <div className="w-12 sm:w-16 h-1 bg-amber-400 dark:bg-amber-600 mx-auto mb-8 sm:mb-12 rounded-full transition-colors duration-300" />
       </div>
 
       <div className="relative">
@@ -43,7 +43,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
         {showScrollButtons && (
           <button
             onClick={scrollLeft}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-300 text-black rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 dark:bg-amber-600 hover:bg-amber-300 dark:hover:bg-amber-700 text-black dark:text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
             aria-label="Scroll left"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
         {showScrollButtons && (
           <button
             onClick={scrollRight}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-300 text-black rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 dark:bg-amber-600 hover:bg-amber-300 dark:hover:bg-amber-700 text-black dark:text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
             aria-label="Scroll right"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

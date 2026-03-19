@@ -27,7 +27,7 @@ export default function ScrollableCardsContainer({
         {/* Left Arrow Button */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-300 text-black rounded-full p-2 sm:p-3 transition-colors shadow-lg"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-amber-400 dark:bg-amber-600 hover:bg-amber-300 dark:hover:bg-amber-700 text-black dark:text-white rounded-full p-2 sm:p-3 transition-colors duration-300 shadow-lg"
           aria-label="Scroll left"
         >
           <svg
@@ -48,7 +48,7 @@ export default function ScrollableCardsContainer({
         {/* Right Arrow Button */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-300 text-black rounded-full p-2 sm:p-3 transition-colors shadow-lg"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-amber-400 dark:bg-amber-600 hover:bg-amber-300 dark:hover:bg-amber-700 text-black dark:text-white rounded-full p-2 sm:p-3 transition-colors duration-300 shadow-lg"
           aria-label="Scroll right"
         >
           <svg
@@ -78,7 +78,7 @@ export default function ScrollableCardsContainer({
       </div>
 
       {/* Scroll Hint Icon */}
-      <div className="text-gray-400 text-center">
+      <div className="text-gray-400 dark:text-gray-500 text-center transition-colors duration-300">
         <span className="text-xs sm:text-sm md:text-base flex items-center gap-2 justify-center">
           Use arrows or scroll to see more →
         </span>

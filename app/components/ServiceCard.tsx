@@ -22,9 +22,9 @@ export default function ServiceCard({ path, title, description }: ServiceCardPro
       </div>
 
       {/* Card Content */}
-      <div className="bg-amber-400 px-3 sm:px-5 py-3 sm:py-4 flex flex-col gap-1 sm:gap-2 flex-1">
-        <h3 className="text-black font-extrabold text-sm sm:text-base md:text-xl uppercase">{title}</h3>
-        <p className="text-black text-xs sm:text-sm md:text-lg leading-relaxed">{description}</p>
+      <div className="bg-amber-400 dark:bg-amber-600 px-3 sm:px-5 py-3 sm:py-4 flex flex-col gap-1 sm:gap-2 flex-1 transition-colors duration-300">
+        <h3 className="text-black dark:text-white font-extrabold text-sm sm:text-base md:text-xl uppercase">{title}</h3>
+        <p className="text-black dark:text-white text-xs sm:text-sm md:text-lg leading-relaxed">{description}</p>
       </div>
     </div>
   );

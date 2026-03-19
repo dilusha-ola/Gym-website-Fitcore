@@ -74,13 +74,13 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="bg-white px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
-        <div className="max-w-5xl mx-auto bg-zinc-200 rounded-3xl px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 text-center shadow-lg">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black uppercase tracking-wide mb-3 sm:mb-4 md:mb-6">
+      <section id="about" className="bg-white dark:bg-gray-950 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 transition-colors duration-300">
+        <div className="max-w-5xl mx-auto bg-zinc-200 dark:bg-gray-800 rounded-3xl px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 text-center shadow-lg dark:shadow-xl transition-colors duration-300">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black dark:text-white uppercase tracking-wide mb-3 sm:mb-4 md:mb-6 transition-colors duration-300">
             About Us
           </h2>
-          <div className="w-12 sm:w-16 h-1 bg-amber-400 mx-auto mb-6 sm:mb-8 rounded-full" />
-          <p className="text-zinc-700 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+          <div className="w-12 sm:w-16 h-1 bg-amber-400 dark:bg-amber-600 mx-auto mb-6 sm:mb-8 rounded-full transition-colors duration-300" />
+          <p className="text-zinc-700 dark:text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed transition-colors duration-300">
             FitCore Gym is dedicated to helping individuals of all fitness levels
             reach their full potential. Our state-of-the-art facility, expert trainers
             and diverse class offerings provide the perfect environment to

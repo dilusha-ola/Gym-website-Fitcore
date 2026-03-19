@@ -60,9 +60,9 @@ const membershipPlans = [
 
 export default function MembershipPlans() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
       <section className="px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-black uppercase tracking-wide mb-6 sm:mb-8 md:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-black dark:text-white uppercase tracking-wide mb-6 sm:mb-8 md:mb-12 transition-colors duration-300">
           Membership Plans
         </h1>
 
