@@ -15,7 +15,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-amber-400 px-4 py-4 flex items-center justify-between shadow-md">
+    <header className="bg-amber-400 px-16 py-4 flex items-center justify-between shadow-md">
       {/* Logo + Brand Name */}
       <div className="flex items-center gap-3">
         <Image

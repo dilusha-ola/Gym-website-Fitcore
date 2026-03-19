@@ -1,4 +1,5 @@
 import MembershipPlanCard from "../components/MembershipPlanCard";
+import ScrollableCardsContainer from "../components/ScrollableCardsContainer";
 
 const membershipPlans = [
   {
@@ -65,35 +66,21 @@ export default function MembershipPlans() {
           Membership Plans
         </h1>
 
-        {/* Horizontal Scrolling Cards Container - Centered with 4 visible */}
-        <div className="flex flex-col items-center gap-4">
-          <div className="relative w-full">
-            <div className="flex justify-center">
-              <div className="overflow-x-auto pb-4 max-w-[1700px] w-full">
-                <div className="flex gap-6 justify-center px-6 min-w-min">
-                  {membershipPlans.map((plan) => (
-                    <div key={plan.planName} className="flex-shrink-0">
-                      <MembershipPlanCard
-                        planName={plan.planName}
-                        planType={plan.planType}
-                        pricing={plan.pricing}
-                        monthlyPrice={plan.monthlyPrice}
-                        features={plan.features}
-                      />
-                    </div>
-                  ))}
-                </div>
+        <ScrollableCardsContainer>
+          <div className="flex gap-6 justify-center px-6 min-w-min">
+            {membershipPlans.map((plan) => (
+              <div key={plan.planName} className="flex-shrink-0">
+                <MembershipPlanCard
+                  planName={plan.planName}
+                  planType={plan.planType}
+                  pricing={plan.pricing}
+                  monthlyPrice={plan.monthlyPrice}
+                  features={plan.features}
+                />
               </div>
-            </div>
+            ))}
           </div>
-
-          {/* Scroll Hint Icon */}
-          <div className="text-gray-400">
-            <span className="text-xl flex items-center gap-2">
-              Scroll to see more →
-            </span>
-          </div>
-        </div>
+        </ScrollableCardsContainer>
       </section>
     </main>
   );
