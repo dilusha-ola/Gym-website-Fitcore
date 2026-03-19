@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
@@ -18,7 +18,12 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="bg-amber-400 dark:bg-orange-500 px-4 sm:px-8 lg:px-16 py-3 sm:py-4 flex items-center justify-between shadow-md transition-colors duration-300">
@@ -75,29 +80,31 @@ export default function Header() {
             );
           })}
           {/* Theme Toggle Button - Desktop */}
-          <li>
-            <button
-              onClick={toggleTheme}
-              className="flex items-center gap-2 px-3 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-sm transition-colors duration-300 hover:opacity-80 ml-2"
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? (
-                <>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l.707.707m-12.728 0l-.707.707m12.728 12.728l.707.707m-12.728 0l-.707.707M12 6a6 6 0 100 12 6 6 0 000-12z" />
-                  </svg>
-                  <span>Light</span>
-                </>
-              ) : (
-                <>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                  </svg>
-                  <span>Dark</span>
-                </>
-              )}
-            </button>
-          </li>
+          {isMounted && (
+            <li>
+              <button
+                onClick={toggleTheme}
+                className="flex items-center gap-2 px-3 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-sm transition-colors duration-300 hover:opacity-80 ml-2"
+                aria-label="Toggle dark mode"
+              >
+                {isDark ? (
+                  <>
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l.707.707m-12.728 0l-.707.707m12.728 12.728l.707.707m-12.728 0l-.707.707M12 6a6 6 0 100 12 6 6 0 000-12z" />
+                    </svg>
+                    <span>Light</span>
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <span>Dark</span>
+                  </>
+                )}
+              </button>
+            </li>
+          )}
         </ul>
       </nav>
 
@@ -127,32 +134,34 @@ export default function Header() {
               );
             })}
             {/* Theme Toggle Button - Mobile */}
-            <li className="border-b border-amber-500 dark:border-gray-700">
-              <button
-                onClick={() => {
-                  toggleTheme();
-                  setMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold bg-black dark:bg-white text-white dark:text-black transition-colors duration-300 hover:opacity-80"
-                aria-label="Toggle dark mode"
-              >
-                {isDark ? (
-                  <>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l.707.707m-12.728 0l-.707.707m12.728 12.728l.707.707m-12.728 0l-.707.707M12 6a6 6 0 100 12 6 6 0 000-12z" />
-                    </svg>
-                    <span>Light Mode</span>
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                    <span>Dark Mode</span>
-                  </>
-                )}
-              </button>
-            </li>
+            {isMounted && (
+              <li className="border-b border-amber-500 dark:border-gray-700">
+                <button
+                  onClick={() => {
+                    toggleTheme();
+                    setMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold bg-black dark:bg-white text-white dark:text-black transition-colors duration-300 hover:opacity-80"
+                  aria-label="Toggle dark mode"
+                >
+                  {isDark ? (
+                    <>
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l.707.707m-12.728 0l-.707.707m12.728 12.728l.707.707m-12.728 0l-.707.707M12 6a6 6 0 100 12 6 6 0 000-12z" />
+                      </svg>
+                      <span>Light Mode</span>
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                      </svg>
+                      <span>Dark Mode</span>
+                    </>
+                  )}
+                </button>
+              </li>
+            )}
           </ul>
         </nav>
       )}
