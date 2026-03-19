@@ -10,25 +10,15 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  // Initialize with light mode (false = light, true = dark)
-  const [isDark, setIsDark] = useState(() => {
-    // Check localStorage first
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-      return savedTheme === "dark";
-    }
-    return false; // Default to light mode
-  });
+  const [isDark, setIsDark] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  // Ensure DOM is synced on mount
+  // Initialize on mount: read localStorage and sync DOM
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const shouldBeDark = savedTheme === "dark";
     
-    if (shouldBeDark !== isDark) {
-      setIsDark(shouldBeDark);
-    }
+    setIsDark(shouldBeDark);
     
     // Apply theme class to document
     if (shouldBeDark) {
@@ -40,7 +30,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setIsMounted(true);
   }, []);
 
-  // Sync DOM whenever isDark state changes (after mount)
+  // Sync DOM whenever isDark state changes
   useEffect(() => {
     if (!isMounted) return;
     
@@ -51,7 +41,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [isDark, isMounted]);
+  }, [isDark]);
 
   const toggleTheme = () => {
     setIsDark((prevState) => !prevState);
