@@ -60,13 +60,13 @@ export default function MembershipPlanCard({
   const colors = colorSchemes[planType];
 
   return (
-    <div className="rounded-2xl overflow-hidden shadow-lg flex flex-col h-full max-w-sm w-full">
+    <div className="rounded-2xl overflow-hidden shadow-lg flex flex-col h-full min-h-[700px] max-w-sm w-full">
       {/* Header with Dumbbell Icon */}
       <div className={`${colors.headerBg} px-6 py-8 flex justify-center`}>
         {planType === "gold" ? (
-          <span className="text-5xl">🏋️</span>
+          <span className="text-7xl">🏋️</span>
         ) : (
-          <span className="text-4xl">🏋️</span>
+          <span className="text-7xl">🏋️</span>
         )}
       </div>
 
@@ -80,7 +80,7 @@ export default function MembershipPlanCard({
       {/* Body Content */}
       <div className={`${colors.bodyBg} px-6 py-6 flex-1 flex flex-col`}>
         {/* Pricing Section */}
-        <div className={`${colors.bodyText} space-y-2 text-sm mb-4`}>
+        <div className={`${colors.bodyText} space-y-2 text-lg mb-4`}>
           <div className="flex justify-between">
             <span>Gents</span>
             <span className="font-semibold">Annual Rs. {pricing.gents.toLocaleString()}</span>
@@ -96,7 +96,7 @@ export default function MembershipPlanCard({
         </div>
 
         {/* Monthly Membership */}
-        <div className={`${colors.bodyText} text-sm mb-4 pb-4 border-b border-opacity-20 border-white`}>
+        <div className={`${colors.bodyText} text-lg mb-4 pb-4 border-b border-opacity-20 border-white`}>
           <div className="flex justify-between">
             <span>Gym Membership (1 Month):</span>
             <span className="font-semibold">Rs. {monthlyPrice.toLocaleString()}</span>
@@ -104,7 +104,7 @@ export default function MembershipPlanCard({
         </div>
 
         {/* Features List */}
-        <div className={`${colors.bodyText} space-y-1 text-sm flex-1`}>
+        <div className={`${colors.bodyText} space-y-1 text-xl flex-1`}>
           {features.map((feature, index) => (
             <div key={index} className="text-center">
               <span>{feature}</span>
