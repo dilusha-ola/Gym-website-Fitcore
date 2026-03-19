@@ -51,23 +51,23 @@ export default function Home() {
             <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">POTENTIAL.</span>
           </h1>
 
-          <button className="mt-6 sm:mt-8 md:mt-10 w-fit bg-amber-400 hover:bg-amber-300 transition-colors text-black font-extrabold text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-widest px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 rounded-full">
+          <button className="mt-6 sm:mt-8 md:mt-10 w-fit bg-amber-400 dark:bg-orange-500 hover:bg-amber-300 dark:hover:bg-orange-600 transition-colors text-black dark:text-black font-extrabold text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-widest px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 rounded-full">
             JOIN TODAY!
           </button>
         </div>
       </section>
 
       {/* Diagonal Section Divider */}
-      <section className="bg-white pt-16 pb-16">
-        <div className="relative w-full h-24 bg-white overflow-hidden">
+      <section className="bg-white dark:bg-gray-950 transition-colors duration-300 pt-16 pb-16">
+        <div className="relative w-full h-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300">
           {/* Left black wedge */}
           <div
-            className="absolute inset-0 bg-black"
+            className="absolute inset-0 bg-black dark:bg-gray-900 transition-colors duration-300"
             style={{ clipPath: "polygon(0 0, 54% 100%, 0 100%)" }}
           />
           {/* Right golden yellow wedge */}
           <div
-            className="absolute inset-0 bg-amber-400"
+            className="absolute inset-0 bg-amber-400 dark:bg-orange-500 transition-colors duration-300"
             style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
           />
         </div>
@@ -92,16 +92,16 @@ export default function Home() {
       <ServicesSection services={services} />
     
     {/* Diagonal Section Divider */}
-      <section className="bg-white">
-        <div className="relative w-full h-24 bg-white overflow-hidden">
+      <section className="bg-white dark:bg-gray-950 transition-colors duration-300">
+        <div className="relative w-full h-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300">
           {/* Right golden yellow wedge */}
           <div
-            className="absolute inset-0 bg-amber-400"
+            className="absolute inset-0 bg-amber-400 dark:bg-orange-500 transition-colors duration-300"
             style={{ clipPath: "polygon(46% 0, 100% 0, 100% 100%)" }}
           />
           {/* Left black wedge */}
           <div
-            className="absolute inset-0 bg-black"
+            className="absolute inset-0 bg-black dark:bg-gray-900 transition-colors duration-300"
             style={{ clipPath: "polygon(0 0, 54% 100%, 0 100%)" }}
           />
         </div>
