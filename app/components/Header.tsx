@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
   { label: "Plans", href: "/membership-plans" },
   { label: "Trainers", href: "/trainers" },
   { label: "Contact", href: "#contact" },
@@ -35,8 +37,9 @@ export default function Header() {
         <ul className="flex items-center gap-1">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
-            // For Contact link, use appropriate href based on current page
-            const href = link.label === "Contact" && pathname !== "/" ? "/#contact" : link.href;
+            // For section links (About, Services, Contact), use appropriate href based on current page
+            const isSectionLink = ["About", "Services", "Contact"].includes(link.label);
+            const href = isSectionLink && pathname !== "/" ? `/` + link.href : link.href;
             
             return (
               <li key={link.href}>
