@@ -1,14 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Plans", href: "/plans" },
+  { label: "Plans", href: "/membership-plans" },
   { label: "Trainers", href: "/trainers" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="bg-amber-400 px-4 py-4 flex items-center justify-between shadow-md">
       {/* Logo + Brand Name */}
@@ -28,20 +33,26 @@ export default function Header() {
       {/* Navigation */}
       <nav>
         <ul className="flex items-center gap-1">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={
-                  link.label === "Home"
-                    ? "bg-amber-300 text-black text-2xl font-bold px-6 py-2 rounded-full"
-                    : "text-black text-2xl font-semibold px-6 py-2 rounded-full hover:bg-amber-300 transition-colors"
-                }
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            // For Contact link, use appropriate href based on current page
+            const href = link.label === "Contact" && pathname !== "/" ? "/#contact" : link.href;
+            
+            return (
+              <li key={link.href}>
+                <Link
+                  href={href}
+                  className={
+                    isActive
+                      ? "bg-amber-300 text-black text-2xl font-bold px-6 py-2 rounded-full transition-colors"
+                      : "text-black text-2xl font-semibold px-6 py-2 rounded-full transition-colors hover:bg-amber-300"
+                  }
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>
