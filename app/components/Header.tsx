@@ -35,10 +35,13 @@ export default function Header() {
         <ul className="flex items-center gap-1">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
+            // For Contact link, use appropriate href based on current page
+            const href = link.label === "Contact" && pathname !== "/" ? "/#contact" : link.href;
+            
             return (
               <li key={link.href}>
                 <Link
-                  href={link.href}
+                  href={href}
                   className={
                     isActive
                       ? "bg-amber-300 text-black text-2xl font-bold px-6 py-2 rounded-full transition-colors"
