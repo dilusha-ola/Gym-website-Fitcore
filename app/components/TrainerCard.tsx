@@ -16,24 +16,24 @@ export default function TrainerCard({
   // Define color schemes for each card style - matching MembershipPlanCard colors
   const colorSchemes = {
     diamond: {
-      infoBg: "bg-[#484747] dark:bg-gray-700 transition-colors duration-300",
-      nameText: "text-white dark:text-white",
-      qualText: "text-white dark:text-gray-100",
+      infoBg: "bg-[#484747] dark:bg-gray-800 transition-colors duration-300",
+      nameText: "text-white dark:text-orange-500",
+      qualText: "text-white dark:text-white",
     },
     platinum: {
       infoBg: "bg-[#392D22] dark:bg-gray-800 transition-colors duration-300",
-      nameText: "text-yellow-400 dark:text-amber-500",
-      qualText: "text-white dark:text-gray-100",
+      nameText: "text-yellow-400 dark:text-orange-500",
+      qualText: "text-white dark:text-white",
     },
     gold: {
-      infoBg: "bg-yellow-400 dark:bg-amber-700 transition-colors duration-300",
-      nameText: "text-black dark:text-white",
+      infoBg: "bg-yellow-400 dark:bg-gray-800 transition-colors duration-300",
+      nameText: "text-black dark:text-orange-500",
       qualText: "text-black dark:text-white",
     },
     silver: {
-      infoBg: "bg-black dark:bg-gray-900 transition-colors duration-300",
-      nameText: "text-yellow-400 dark:text-amber-500",
-      qualText: "text-white dark:text-gray-100",
+      infoBg: "bg-black dark:bg-gray-800 transition-colors duration-300",
+      nameText: "text-yellow-400 dark:text-orange-500",
+      qualText: "text-white dark:text-white",
     },
   };
 
