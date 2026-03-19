@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-white py-16 px-6">
+      <section id="contact" className="bg-white py-16 px-6">
         <ContactForm />
       </section>
     </main>
