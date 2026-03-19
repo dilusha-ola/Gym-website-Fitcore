@@ -20,86 +20,103 @@ export default function MembershipPlanCard({
   // Define color schemes for each plan type
   const colorSchemes = {
     diamond: {
-      header: "bg-gray-700",
-      title: "text-amber-400",
-      button: "bg-amber-600 hover:bg-amber-700",
-      card: "bg-gray-600",
+      headerBg: "bg-[#392D22]",
+      titleBg: "bg-[#484747]",
+      titleText: "text-yellow-400",
+      bodyBg: "bg-[#484747]",
+      bodyText: "text-white",
+      buttonBg: "bg-[#392D22] hover:bg-[#4A3A2E]",
+      buttonText: "text-yellow-400",
     },
     platinum: {
-      header: "bg-black",
-      title: "text-amber-400",
-      button: "bg-amber-400 hover:bg-amber-300 text-black",
-      card: "bg-gray-900",
+      headerBg: "bg-black",
+      titleBg: "bg-[#392D22]",
+      titleText: "text-yellow-400",
+      bodyBg: "bg-[#392D22]",
+      bodyText: "text-white",
+      buttonBg: "bg-black hover:bg-gray-900",
+      buttonText: "text-yellow-400",
     },
     gold: {
-      header: "bg-amber-400",
-      title: "text-black",
-      button: "bg-amber-400 hover:bg-amber-300 text-black",
-      card: "bg-black",
+      headerBg: "bg-yellow-400",
+      titleBg: "bg-black",
+      titleText: "text-yellow-400",
+      bodyBg: "bg-black",
+      bodyText: "text-white",
+      buttonBg: "bg-yellow-400 hover:bg-yellow-300",
+      buttonText: "text-black",
     },
     silver: {
-      header: "bg-gray-700",
-      title: "text-amber-400",
-      button: "bg-amber-600 hover:bg-amber-700",
-      card: "bg-gray-800",
+      headerBg: "bg-[#484747]",
+      titleBg: "bg-black",
+      titleText: "text-yellow-400",
+      bodyBg: "bg-black",
+      bodyText: "text-white",
+      buttonBg: "bg-[#484747] hover:bg-[#555555]",
+      buttonText: "text-yellow-400",
     },
   };
 
   const colors = colorSchemes[planType];
 
   return (
-    <div
-      className={`${colors.card} rounded-2xl overflow-hidden shadow-lg flex flex-col h-full max-w-sm w-full`}
-    >
+    <div className="rounded-2xl overflow-hidden shadow-lg flex flex-col h-full max-w-sm w-full">
       {/* Header with Dumbbell Icon */}
-      <div className={`${colors.header} px-6 py-8 flex justify-center`}>
-        <span className="text-4xl">🏋️</span>
+      <div className={`${colors.headerBg} px-6 py-8 flex justify-center`}>
+        {planType === "gold" ? (
+          <span className="text-5xl">🏋️</span>
+        ) : (
+          <span className="text-4xl">🏋️</span>
+        )}
       </div>
 
-      {/* Plan Name */}
-      <div className={`px-6 py-4 text-center border-b border-gray-600`}>
-        <h3 className={`text-3xl font-extrabold ${colors.title} uppercase tracking-wide`}>
+      {/* Plan Name Section */}
+      <div className={`${colors.titleBg} px-6 py-6 text-center`}>
+        <h3 className={`text-3xl font-extrabold ${colors.titleText} uppercase tracking-wide`}>
           {planName}
         </h3>
       </div>
 
-      {/* Pricing Section */}
-      <div className="px-6 py-6 text-gray-300 space-y-2">
-        <div className="flex justify-between text-sm">
-          <span>Gents</span>
-          <span className="font-semibold">Annual Rs. {pricing.gents.toLocaleString()}</span>
-        </div>
-        <div className="flex justify-between text-sm">
-          <span>Ladies</span>
-          <span className="font-semibold">Annual Rs. {pricing.ladies.toLocaleString()}</span>
-        </div>
-        <div className="flex justify-between text-sm">
-          <span>Couple</span>
-          <span className="font-semibold">Annual Rs. {pricing.couple.toLocaleString()}</span>
-        </div>
-      </div>
-
-      {/* Monthly Membership */}
-      <div className="px-6 py-4 border-t border-gray-600 text-gray-300 text-sm">
-        <div className="flex justify-between mb-2">
-          <span>Gym Membership (1 Month):</span>
-          <span className="font-semibold">Rs. {monthlyPrice.toLocaleString()}</span>
-        </div>
-      </div>
-
-      {/* Features List */}
-      <div className="px-6 py-4 border-t border-gray-600 text-gray-300 space-y-2 flex-1">
-        {features.map((feature, index) => (
-          <div key={index} className="text-sm">
-            <span>• {feature}</span>
+      {/* Body Content */}
+      <div className={`${colors.bodyBg} px-6 py-6 flex-1 flex flex-col`}>
+        {/* Pricing Section */}
+        <div className={`${colors.bodyText} space-y-2 text-sm mb-4`}>
+          <div className="flex justify-between">
+            <span>Gents</span>
+            <span className="font-semibold">Annual Rs. {pricing.gents.toLocaleString()}</span>
           </div>
-        ))}
+          <div className="flex justify-between">
+            <span>Ladies</span>
+            <span className="font-semibold">Annual Rs. {pricing.ladies.toLocaleString()}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Couple</span>
+            <span className="font-semibold">Annual Rs. {pricing.couple.toLocaleString()}</span>
+          </div>
+        </div>
+
+        {/* Monthly Membership */}
+        <div className={`${colors.bodyText} text-sm mb-4 pb-4 border-b border-opacity-20 border-white`}>
+          <div className="flex justify-between">
+            <span>Gym Membership (1 Month):</span>
+            <span className="font-semibold">Rs. {monthlyPrice.toLocaleString()}</span>
+          </div>
+        </div>
+
+        {/* Features List */}
+        <div className={`${colors.bodyText} space-y-1 text-sm flex-1`}>
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <span>{feature}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Select Plan Button */}
-      <div className="px-6 py-6 border-t border-gray-600">
+      <div className={`${colors.bodyBg} px-6 py-6`}>
         <button
-          className={`${colors.button} w-full font-extrabold text-lg py-3 rounded-full transition-colors uppercase tracking-wide`}
+          className={`${colors.buttonBg} ${colors.buttonText} w-full font-extrabold text-lg py-3 rounded-full transition-colors uppercase tracking-wide`}
         >
           Select Plan
         </button>
